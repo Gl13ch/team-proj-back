@@ -3,26 +3,26 @@ const router = express.Router();
 const Games = require('../models/games.js')
 
 router.get('/', (req, res)=>{
-  Games.find({}, (err, foundpet) => {
-    res.json(foundpet)
+  Games.find({}, (err, foundgames) => {
+    res.json(foundgames)
   })
 })
 
 router.post('/', (req, res) => {
-  Games.create(req.body, (err, createdpet) => {
-    res.json(createdpet)
+  Games.create(req.body, (err, createdgames) => {
+    res.json(createdgames)
   })
 })
 
 router.delete('/:id', (req, res) => {
-  Games.findByIdAndRemove(req.params.id, (err, deletedpet) => {
-    res.json(deletedpet)
+  Games.findByIdAndRemove(req.params.id, (err, deletedgames) => {
+    res.json(deletedgames)
   })
 })
 
 router.put('/:id', (req, res) => {
-  Games.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedpet) => {
-    res.json(updatedpet)
+  Games.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedgames) => {
+    res.json(updatedgames)
   })
 })
 
