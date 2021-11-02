@@ -15,7 +15,7 @@ app.listen(PORT, ()=>{
     console.log('listening...', PORT);
 })
 
-mongoose.connect('mongodb://localhost:27017/merncrud')
+mongoose.connect('mongodb://localhost:27017/games')
 mongoose.connection.once('open', ()=>{
     console.log('connected to mongod...');
 });
